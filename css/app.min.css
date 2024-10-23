@@ -10896,23 +10896,15 @@ a:hover {
   }
 }
 .background {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Высота 100% экрана */
-  overflow: hidden;
+}
+
+.video {
+  margin-left: 500px;
 }
 
 #bg-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -2; /* Видеофон позади контента */
-  transform: translate(-50%, -50%);
-  object-fit: cover; /* Сохраняем масштабирование видео для любых экранов */
+  height: 100%;
 }
 
 /* Полупрозрачный оверлей */
@@ -10922,28 +10914,25 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой, если нужен */
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой */
   z-index: -1; /* Контент поверх видео */
 }
 
 /* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 390px) {
   #bg-video {
-    min-width: 100vw;
-    min-height: 100vh;
-    width: auto;
-    height: auto;
+    min-width: 100vw; /* Убедимся, что видео покрывает ширину экрана */
+    min-height: 100vh; /* Убедимся, что видео покрывает высоту экрана */
     transform: translate(-50%, -50%);
-    object-fit: cover; /* Масштабируем видео по размеру экрана */
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 390px) {
   #bg-video {
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: 100vw; /* Видео растягивается на всю ширину экрана */
+    min-height: 100vh; /* Видео растягивается на всю высоту экрана */
     transform: translate(-50%, -50%);
-    object-fit: cover; /* Убедимся, что видео будет покрывать весь экран */
+    object-fit: cover; /* Видео масштабируется корректно на небольших экранах */
   }
 }
 
@@ -11163,7 +11152,7 @@ a:hover {
   transform: translateX(0);
 }
 .fullscreen-content.dark-bg {
-  background: #000;
+  background: #fff;
   color: #fff;
 }
 .fullscreen-content.dark-bg a:not(.btn) {
@@ -11845,17 +11834,17 @@ label {
   animation-delay: 3s;
 }
 .btn {
-  color: #ffffff; /* Цвет текста кнопки */
-  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  color: #000; /* Цвет текста кнопки */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff; /* Черный текст при наведении */
   border: 2px solid rgba(255, 255, 255, 0.5); /* Полупрозрачная рамка */
-  padding: 12px 20px; /* Отступы кнопки */
+  padding: 12px 50px; /* Отступы кнопки */
   font-size: 1.2rem; /* Размер шрифта */
   transition: background-color 0.3s, color 0.3s; /* Плавный переход */
   display: inline-block; /* Для выравнивания */
   border-radius: 5px; /* Закругленные углы */
   text-align: center; /* Центрирование текста */
   white-space: normal; /* Разрешить перенос текста */
-  backdrop-filter: blur(10px); /* Эффект размытия фона */
 }
 
 /* Эффекты при наведении */
@@ -11867,7 +11856,7 @@ label {
 /* Адаптивные стили */
 @media (max-width: 768px) {
   .btn {
-    padding: 0px 5px; /* Уменьшение отступов для мобильных устройств */
+    padding: 15px 35px; /* Уменьшение отступов для мобильных устройств */
     font-size: 1rem; /* Уменьшение размера шрифта для мобильных устройств */
   }
 }
@@ -11876,6 +11865,6 @@ label {
   .btn {
     width: 100%; /* Кнопка на всю ширину экрана на маленьких устройствах */
     font-size: 0.9rem; /* Дополнительное уменьшение размера шрифта */
-    padding: 15px; /* Увеличение вертикальных отступов */
+    padding: 15px 35px; /* Увеличение вертикальных отступов */
   }
 }
