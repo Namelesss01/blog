@@ -6,13 +6,11 @@
  */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 body {
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 article,
 aside,
@@ -23,8 +21,6 @@ section {
   display: block;
 }
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 figcaption,
 figure,
@@ -10828,9 +10824,6 @@ a:hover {
 .btn-outline:focus:active,
 .btn-outline:focus:hover,
 .btn-outline:hover {
-  color: #292b2c;
-  background-color: #fff;
-  border-color: #fff;
 }
 .light-theme .btn-outline,
 .light-theme .btn-outline:focus,
@@ -11835,18 +11828,32 @@ label {
   -webkit-animation-delay: 3s;
   animation-delay: 3s;
 }
+
 .btn {
-  color: #000; /* Цвет текста кнопки */
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ffffff; /* Черный текст при наведении */
+  font-family: "Montserrat", sans-serif; /* Добавляем новый шрифт */
+  font-weight: 500; /* Полужирный шрифт */
+  color: #ffffff; /* Цвет текста кнопки */
+  background-color: rgba(0, 0, 0, 0.8); /* Темный фон кнопки */
   border: 2px solid rgba(255, 255, 255, 0.5); /* Полупрозрачная рамка */
-  padding: 12px 50px; /* Отступы кнопки */
-  font-size: 1.2rem; /* Размер шрифта */
-  transition: background-color 0.3s, color 0.3s; /* Плавный переход */
-  display: inline-block; /* Для выравнивания */
-  border-radius: 5px; /* Закругленные углы */
-  text-align: center; /* Центрирование текста */
-  white-space: normal; /* Разрешить перенос текста */
+  padding: 12px 40px; /* Отступы кнопки */
+  font-size: 1.2rem; /* Увеличиваем размер шрифта */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Плавный переход и тень */
+  display: inline-block;
+  border-radius: 8px; /* Более закругленные углы */
+  text-align: center;
+  white-space: normal;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Меняем фон при наведении */
+  color: #000; /* Черный текст при наведении */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Более сильная тень при наведении */
+}
+
+.text-btn {
+  font-size: 1.2rem; /* Увеличиваем размер шрифта */
+  font-weight: 700; /* Полужирный шрифт */
 }
 
 /* Адаптивные стили */
