@@ -10904,6 +10904,8 @@ a:hover {
 
 #bg-video {
   position: absolute;
+  top: auto;
+  left: auto;
   height: 100%;
 }
 
@@ -11845,12 +11847,6 @@ label {
   border-radius: 5px; /* Закругленные углы */
   text-align: center; /* Центрирование текста */
   white-space: normal; /* Разрешить перенос текста */
-}
-
-/* Эффекты при наведении */
-.btn:hover {
-  background-color: #ffffff; /* Цвет фона при наведении */
-  color: #343a40; /* Цвет текста при наведении */
 }
 
 /* Адаптивные стили */
