@@ -10892,6 +10892,7 @@ a:hover {
 }
 
 .video {
+  margin-left: 500px;
 }
 
 #bg-video {
@@ -11124,6 +11125,7 @@ a:hover {
   animation-delay: 1.5s;
 }
 .fullscreen-content {
+  color: #fff;
   position: fixed;
   top: 0;
   left: 0;
